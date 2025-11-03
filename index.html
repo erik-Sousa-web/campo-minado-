@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💣 Campo Minado - Imersão DEV</title>
+    
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <header>
+        <img src="arquivo de imagem/campo minado.webp" alt="Logo do Jogo" class="logo">
+    </header>
+
+    <main class="container">
+        <div class="content">
+            <h2>Tente a sorte nesse campo minado</h2>
+            <p>Cuidado com a **BOMBA** !!!</p>
+            
+            <button id="start-button" onclick="iniciarJogo()">Bora jogar!</button>
+            
+            <div id="game-board">
+            </div>
+
+            <button id="restart-button" onclick="reiniciarJogo()" style="display: none; margin-top: 20px;">
+                Novo Jogo
+            </button>
+            
+        </div>
+    </main>
+
+    <footer>
+        Alura - Imersão DEV - 2025
+    </footer>
+    
+    <script src="script.js"></script> 
+</body>
+</html>

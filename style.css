@@ -1,0 +1,139 @@
+/* Estilos Globais */
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+header {
+    position: relative; 
+    z-index: 10;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    max-width: 120px; 
+    height: auto;
+    border: 2px solid #eae2e2; 
+    border-radius: 4px;
+}
+
+/* Container com a imagem de fundo */
+.container {
+    background: url('https://m.media-amazon.com/images/S/pv-target-images/ff178bf42521d65656a9666e3bbc8955636418c4f9610eeedee87e9335c83059._SX1080_FMjpg_.jpg') no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Div de Conteúdo para texto e botão */
+.content {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 30px 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5); 
+    max-width: 90%;
+}
+
+.content h2 {
+    margin-bottom: 25px;
+    color: #ff4d4d;
+    text-transform: uppercase;
+    font-size: 2em;
+}
+
+.content p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+/* Estilos do Botão */
+button {
+    background-color: #ff0000;
+    border: 2px solid #ff0000;
+    border-radius: 5px;
+    padding: 12px 25px;
+    font-size: 1.3em;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: transparent;
+    color: #1ABC9C;
+    border-color: #1ABC9C;
+    transform: scale(1.05);
+}
+
+/* Estilos do Rodapé */
+footer {
+    background-color: rgba(0, 0, 0, 0.8); 
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* --- Estilos do Tabuleiro --- */
+
+#game-board {
+    display: none; 
+    padding: 10px;
+    background-color: #333;
+    border-radius: 8px;
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    line-height: 30px; 
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Estilo para as células não abertas (blocos de minas) */
+.cell.hidden {
+    background-color: #1ABC9C;
+    border: 1px solid #0e7d66;
+}
+
+.cell.hidden:hover {
+    background-color: #27ae60;
+}
+
+/* Estilo para as células reveladas */
+.cell.revealed {
+    background-color: #ccc;
+    color: #000;
+    border: 1px solid #999;
+}
+
+/* Mídias Queries para Telas Menores */
+@media (max-width: 600px) {
+    .content {
+        padding: 20px;
+    }
+
+    .content h2 {
+        font-size: 1.5em;
+    }
+
+    .logo {
+        top: 10px;
+        right: 10px;
+        max-width: 100px;
+    }
+}
